@@ -8,15 +8,18 @@ html {
     height: 100%;
 }
 
+
+
 body {
-    background-color: blue;
+    background-color: azure;
     background-position: center center;
     background-size: cover;
     font-family: 'Helvetica';
-    color: white;
+    color: black;
     min-height: 100%;
     padding-bottom: 200px;
  }
+
 
  .container {
      margin: 0 auto;
