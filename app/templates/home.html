@@ -1,11 +1,11 @@
 
 <section class="chat-rooms-content container clearfix" >
-    <div class="rooms col-md-3">
+    <div class="rooms col-md-2">
       <h1 class="hero-title">{{home.heroTitle}}</h1>
       <div class="room-list">
-        <ul ng-repeat="room in home.rooms">
+        <ul ng-repeat="currentRoom in home.rooms">
           <li>
-            {{room.$value}}
+            <a class ="room-name" ng-click="home.activeRoom(currentRoom)">{{currentRoom.$value}}</a>
           </li>
         </ul>
       </div>
@@ -14,7 +14,7 @@
       </div>
       <div class="container">
           <div class="col-md-3">
-             <h3 class="room-name-header">{{ home.currentRoom.$value }}</h3>
+             <h3 class="room-name-header">{{ currentRoom.$value }}</h3>
           </div>
       </div>
     </div>

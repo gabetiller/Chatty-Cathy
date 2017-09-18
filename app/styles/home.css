@@ -1,11 +1,5 @@
 .rooms .hero-title  {
-  position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 18%;
-  background-color: red;
+  position: relative;
   padding: 3rem;
   opacity: 1;
   text-align: left;
@@ -17,8 +11,7 @@
   }
 
 .room-list {
-  position: absolute;
-  top: 300px;
+  position: relative;
   padding: 3rem;
 }
 

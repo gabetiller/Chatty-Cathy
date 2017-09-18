@@ -4,13 +4,15 @@
     * @function HomeCtrl
     */
     function HomeCtrl(Room, $uibModal) {
+
         this.rooms = Room.all;
         this.heroTitle = "Bloc Chat";
-
+        
         /**
         * @function openModal
         * @desc opens modal
         */
+
         this.openModal = function () {
             $uibModal.open({
             animation: true,
@@ -19,7 +21,10 @@
           });
         };
 
-
+        this.activeRoom = function(rooms) {
+          this.currentRoom = rooms;
+          console.log('activeRoom is being hit')
+        };
 
     }
     angular
