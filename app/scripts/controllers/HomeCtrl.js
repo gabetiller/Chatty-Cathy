@@ -3,11 +3,13 @@
     /**
     * @function HomeCtrl
     */
-    function HomeCtrl(Room, $uibModal) {
+    function HomeCtrl(Room, Message, $uibModal) {
 
+        // use `this` when you want to make something public – accessible to other parts of the application
+        // use `var` when you want to make something private – only usable inside of its own controller/service
         this.rooms = Room.all;
         this.heroTitle = "Bloc Chat";
-        
+
         /**
         * @function openModal
         * @desc opens modal
@@ -17,19 +19,20 @@
             $uibModal.open({
             animation: true,
             templateUrl: '/templates/modal.html',
-            controller: 'ModalCtrl as modal',
+            controller: 'RoomCtrl as room',
           });
         };
 
-        this.activeRoom = function(rooms) {
-          this.currentRoom = rooms;
+        this.setActiveRoom = function(room) {
+          this.currentRoom = room;
+          this.allTheMessages = Message.getByRoomId(this.currentRoom.$id);
           console.log('activeRoom is being hit')
         };
 
     }
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', '$uibModal', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', '$uibModal', HomeCtrl]);
 })();
 // (function() {
 //     function HomeCtrl(Room) {

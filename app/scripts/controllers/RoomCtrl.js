@@ -4,7 +4,8 @@
     * @desc
     * @returns
     */
-    function ModalCtrl(Room, $uibModalInstance) {
+    function RoomCtrl(Room, Message, $uibModalInstance) {
+
         /**
         * @function addRoom
         * @desc adds a new room to room list
@@ -16,9 +17,11 @@
             console.log("add room is being hit", this);
         };
 
+
+
         /**
         * @function closeModal
-        * @desc closes the modal
+        * @desc closes the modal when user hits cancel
         * @returns
         */
         this.closeModal = function () {
@@ -30,5 +33,5 @@
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
+        .controller('RoomCtrl', ['Room', 'Message', '$uibModalInstance', RoomCtrl]);
 })();

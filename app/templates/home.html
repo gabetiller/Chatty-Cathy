@@ -1,24 +1,31 @@
 
-<section class="chat-rooms-content container clearfix" >
-    <div class="rooms col-md-2">
+<div class="container">
+  <div class="row">
+    <div class="rooms col-md-6">
       <h1 class="hero-title">{{home.heroTitle}}</h1>
+      <div>
+      <button class="btn btn-outline-primary btn-lg" type="button" ng-click="home.openModal()">New Room</button>
+      </div>
       <div class="room-list">
-        <ul ng-repeat="currentRoom in home.rooms">
+        <ul class="list-unstyled" ng-repeat="currentRoom in home.rooms">
           <li>
-            <a class ="room-name" ng-click="home.activeRoom(currentRoom)">{{currentRoom.$value}}</a>
+            <a class ="room-name" ng-click="home.setActiveRoom(currentRoom)">{{ currentRoom.$value }}</a>
+
           </li>
         </ul>
       </div>
-      <div class="col-md-3">
-         <button type="button" class="btn-default" ng-click="home.openModal()"><b>New Room</b></button>
-      </div>
-      <div class="container">
-          <div class="col-md-3">
-             <h3 class="room-name-header">{{ currentRoom.$value }}</h3>
-          </div>
-      </div>
     </div>
-  </section>
+    <div class="col-md-2">
+       <h3 class="room-name-header">{{ home.currentRoom.$value }}</h3>
+          <div class="messages" ng-repeat="currentMessage in home.allTheMessages">
+            <p class="alternative_cls">{{ currentMessage.username }}  {{ currentMessage.content }} {{ currentMessage.sentAt }} {{ currentMessage.roomID}}</p>
+          </div>
+    </div>
+    </section>
+  </div>
+</div>
+
+
 <!-- <div class="form" ng-submit="home.addRoom()">
   <form class="new-room">
     <input type="text" ng-model="home.newRoom.name" class="form-control" placeholder="add room">

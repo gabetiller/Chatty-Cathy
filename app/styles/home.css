@@ -1,20 +1,15 @@
-.rooms .hero-title  {
-  position: relative;
-  padding: 3rem;
-  opacity: 1;
-  text-align: left;
-  font-size: 4rem;
+.hero-title {
+  font-size: 3rem;
   font-weight: 900;
-  text-decoration: underline;
-  letter-spacing: 0.2rem;
-
-  }
-
-.room-list {
-  position: relative;
-  padding: 3rem;
 }
 
-.form {
-  color:black;
+.room-list {
+  padding-top: 2rem;
+
+}
+.room-name {
+  font-size: 2rem;
+}
+.room-name-header {
+  font-size: 3rem;
 }
