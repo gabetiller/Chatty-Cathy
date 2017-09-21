@@ -17,11 +17,14 @@
         * @function Room.addRoom
         * @desc adds room to database
         */
-        
+
         Room.addRoom = function(room) {
             rooms.$add(room);
             console.log("addRoom is being hit")
+
         };
+
+
 
 
 
