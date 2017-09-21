@@ -21,7 +21,7 @@
 
         /**
         * @function closeModal
-        * @desc closes the modal when user hits cancel
+        * @desc closes the modal when user hit cancel
         * @returns
         */
         this.closeModal = function () {
