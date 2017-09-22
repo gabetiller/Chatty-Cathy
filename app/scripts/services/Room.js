@@ -24,6 +24,10 @@
 
         };
 
+        // Room.deleteRoom = function(room) {
+        //   rooms.$remove(room);
+        //   console.log("deleteRoom is being hit")
+        // }
 
 
 

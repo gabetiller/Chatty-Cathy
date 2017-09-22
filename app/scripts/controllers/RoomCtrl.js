@@ -17,6 +17,10 @@
             console.log("add room is being hit", this);
         };
 
+        this.deleteRoom = function() {
+          Room.deleteRoom(this.currentRoom);
+        };
+
 
 
         /**

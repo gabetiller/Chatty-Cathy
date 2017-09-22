@@ -1,6 +1,6 @@
 (function() {
   function Message($firebaseArray) {
-    
+
     var Message = {};
     var ref = firebase.database().ref().child("messages");
     var messages = $firebaseArray(ref);
@@ -11,7 +11,10 @@
       console.log(roomMessages);
       return roomMessages;
     };
-      //getting the message by the roomID. This way we can associate a message with a room.
+
+    Message.send = function(newMessage) {
+      messages.$add(newMessage);
+  };
 
 
 

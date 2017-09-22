@@ -30,7 +30,18 @@
           console.log('activeRoom is being hit')
         };
 
+        this.submitMessage = function () {
+          Message.send({
+                roomID: this.currentRoom.$id,
+                content: this.newMessage,
+                username: currentUser
+            });
+            this.newMessage = "";
+        };
+
     }
+
+
     angular
         .module('blocChat')
         .controller('HomeCtrl', ['Room', 'Message', '$uibModal', '$cookies', HomeCtrl]);
