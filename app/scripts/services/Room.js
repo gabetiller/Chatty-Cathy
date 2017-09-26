@@ -18,8 +18,8 @@
         * @desc adds room to database
         */
 
-        Room.addRoom = function(room) {
-            rooms.$add(room);
+        Room.addRoom = function(newRoomName) {
+            rooms.$add(newRoomName);
             console.log("addRoom is being hit")
 
         };

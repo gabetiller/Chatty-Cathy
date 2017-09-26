@@ -21,6 +21,15 @@
           Room.deleteRoom(this.currentRoom);
         };
 
+        this.submitMessage = function () {
+          Message.send({
+                roomID: this.currentRoom.$id,
+                content: this.newMessage,
+                username: currentUser
+            });
+            this.newMessage = "";
+        };
+
 
 
         /**
@@ -37,5 +46,5 @@
 
     angular
         .module('blocChat')
-        .controller('RoomCtrl', ['Room', 'Message', '$uibModalInstance', RoomCtrl]);
+        .controller('RoomCtrl', ['Room', 'Message','$uibModalInstance', RoomCtrl]);
 })();
