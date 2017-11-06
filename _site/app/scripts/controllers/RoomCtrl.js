@@ -17,6 +17,13 @@
             console.log("add room is being hit", this);
         };
 
+        this.deleteRoom = function() {
+            Room.deleteRoom(this.currentRoom);
+            this.currentRoom= "";
+            console.log("delete is firing", this);
+        };
+
+
         this.submitMessage = function () {
           Message.send({
                 roomID: this.currentRoom.$id,
@@ -25,6 +32,8 @@
             });
             this.newMessage = "";
         };
+
+
 
 
 

@@ -8,7 +8,7 @@
         // use `this` when you want to make something public – accessible to other parts of the application
         // use `var` when you want to make something private – only usable inside of its own controller/service
         this.rooms = Room.all;
-        this.heroTitle = "Chatty Cathy";
+        this.heroTitle = "Bloc Chat";
         currentUser = $cookies.get('blocChatCurrentUser');
 
         /**
@@ -30,6 +30,9 @@
           console.log('activeRoom is being hit')
         };
 
+    
+
+
         this.submitMessage = function () {
           Message.send({
                 roomID: this.currentRoom.$id,
@@ -39,6 +42,8 @@
             this.newMessage = "";
         };
 
+
+
     }
 
 
@@ -46,3 +51,16 @@
         .module('blocChat')
         .controller('HomeCtrl', ['Room', 'Message', '$uibModal', '$cookies', HomeCtrl]);
 })();
+// (function() {
+//     function HomeCtrl(Room) {
+//
+//       this.rooms = Room.all;
+//       this.heroTitle = "Bloc Chat";
+//
+//     }
+//
+//
+//     angular
+//         .module('blocChat')
+//         .controller('HomeCtrl', ['Room', HomeCtrl]);
+// })();

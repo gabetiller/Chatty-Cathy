@@ -1,5 +1,5 @@
 .hero-title {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 600;
   text-shadow: 1px 1px 1px 1px;
 }
@@ -9,10 +9,10 @@
 
 }
 .room-name {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .room-name-header {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .message-form {

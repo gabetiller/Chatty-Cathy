@@ -11,16 +11,28 @@
         console.log(rooms);
 
         Room.all = rooms;
+
+
         /**
         * @function Room.addRoom
         * @desc adds room to database
         */
-        
+
         Room.addRoom = function(newRoomName) {
             rooms.$add(newRoomName);
             console.log("addRoom is being hit")
 
         };
+
+        Room.deleteRoom = function(room) {
+          rooms.$remove(room);
+          console.log("deleteRoom is being hit")
+        }
+
+
+
+
+
 
     return Room;
 
