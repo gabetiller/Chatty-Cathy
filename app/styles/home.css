@@ -1,7 +1,17 @@
+.footer {
+  position: absolute;
+  margin:auto;
+  margin-top: 14rem;
+
+}
+.input-group {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 .hero-title {
   font-size: 2rem;
-  font-weight: 600;
-  text-shadow: 1px 1px 1px 1px;
+  font-weight: 500;
+  /*text-shadow: 2px -5px 5px*/
 }
 
 .room-list {
@@ -14,6 +24,10 @@
 .room-name-header {
   font-size: 2rem;
 }
+.alternative_cls {
+  font-size: : 1.5rem
+  padding-top: 2rem
+}
 
 .message-form {
   padding-top: 4rem;
@@ -23,3 +37,45 @@ p {
   font-size: 18px;
 
 }
+
+/**, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}*/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+a {
+  color: black;
+}
+
+body {
+    background-color: orangered;
+    font-family: 'Helvetica';
+    margin: 0 0 100px; /* bottom = footer height */
+    min-height: 100%
+}
+
+
+ /* Medium and small screens (640px) */
+ @media (min-width: 40rem) {
+     html { font-size: 112%; }
+
+ /* Large screens (1024px) */
+ @media (min-width: 64rem) {
+     html { font-size: 120%; }
+ }
+
+ /*.clearfix:before,
+ .clearfix:after {
+     content: " ";
+     display: table;
+ }*/
+
+ .clearfix:after {
+     clear: both;
+ }

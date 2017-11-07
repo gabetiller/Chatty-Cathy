@@ -8,7 +8,7 @@
         // use `this` when you want to make something public – accessible to other parts of the application
         // use `var` when you want to make something private – only usable inside of its own controller/service
         this.rooms = Room.all;
-        this.heroTitle = "Chatty Cathy";
+        this.heroTitle = "chatty cathy";
         currentUser = $cookies.get('blocChatCurrentUser');
 
         /**
