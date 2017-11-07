@@ -1,18 +1,17 @@
 
-<main class="modal-view" style= "background-color:orangered";>
-    <div class="modal-content" style="background-color:orangered";>
-      <div class="modal-header">
-          <h3 class="modal-title">Create A New Room</h3>
-      <form ng-submit="room.addRoom()" class="container-fluid">
-          <div class="modal-name-input">
-              <input type="text" ng-model="room.newRoomName" placeholder="Room 1">
-          </div>
-          <div class="modal-buttons" style="margin-top: 10px;">
-              <button class="btn btn-outline-primary btn-sm" type="submit" ng-click="room.closeModal()">+ Room</button>
-              <button class="btn btn-outline-primary btn-sm"type="button" ng-click="room.closeModal()">Cancel</button>
-        </div>
 
-     </form>
-     </div>
-   </div>
-</main>
+<div class="modal-content" style="background-color:orangered";>
+  <div class="modal-header">
+    <h3 style="padding-left: 1.5rem;"class="modal-title">don't be shy...</h3>
+    <form ng-submit="room.addRoom()" class="container-fluid">
+      <div class="modal-name-input">
+        <input class="form-control"type="text" ng-model="room.newRoomName" placeholder="Room 1">
+      </div>
+      <div class="modal-buttons" style="margin-top: 10px;">
+        <button class="btn btn-md" type="submit" ng-click="room.closeModal()"> add one</button>
+        <button class="btn btn-md"type="button" ng-click="room.closeModal()">nevermind</button>
+      </div>
+
+    </form>
+  </div>
+</div>
